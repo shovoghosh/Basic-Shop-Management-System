@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Product List | Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script  src="/js/jquery-3.3.1.js"></script>
+	<script  src="/js/psearch.js"></script>
+</head>
+<body>
+		<h1>Welcome <%=name %></h1>
+		
+		
+		<a href="/product/addProduct">Add Product</a> 
+		 <a href="/home">Home</a> 
+		
+		<br/><br/><br/>
+		 <input type="text" placeholder="Enter Product Name" id="pnam"/>
+		<button>Search</button>
+		<p id="par"></p>
+		
+		
+		<h2>Product List </h2>
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>Product Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Operations</th>
+			</tr>
+			<% for(var i=0;i<list.length;i++){%>
+
+				<tr>
+					<td><%= list[i].id %></td>
+					<td><%= list[i].name %></td>
+					<td><%= list[i].quantity %></td>
+					<td><%= list[i].price %></td>
+					<td> <a href="/product/edit/<%= list[i].id %>">Edit</a>  
+					<a href="/product/delete/<%= list[i].id %>">Delete </a></td>
+				</tr>
+
+
+
+			<% } %>
+		</table>
+		
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Edit | Page</title>
+	<script  src="jquery-3.3.1.js"></script>
+	<script  src="null.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/add.css">
+</head>
+<body>
+<h1> Update Employee</h1>
+
+	<form class="editu" method="post">
+		<input type="hidden" name="id" value="<%=id %>"/>
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name"  id="name" value="<%=name %>"/></td>
+			</tr>
+			<tr>
+				<td>Contact No.</td>
+				<td><input type="text" name="contact" id="contact" value="<%=contact%>" /></td>
+			</tr>
+			<tr>
+				<td>User Name</td>
+				<td><input type="text" name="username" id="username" value="<%=username %>"/></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" id="password" value="<%= password %>"/></td>
+			</tr>
+			<tr>
+				<td><br><br></td>
+				<td>
+				<input type="submit" id="submit"  value="Save" />
+				<a style="text-decoration:none" href="/home"> Home</a> 
+				
+				</td>
+				<td id="message"></td>
+			</tr>
+
+		</table>
+		
+	</form> 
+</body>
+</html>

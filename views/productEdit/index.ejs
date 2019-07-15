@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Edit | Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/add.css">
+</head>
+<body>
+<h1> Update Product</h1>
+	<form method="post">
+		<input type="hidden" name="id" value="<%=id %>"/>
+		<table>
+			<tr>
+				<td>Name </td>
+				<td><input type="text" name="name"  id="name" value="<%=name %>"/></td>
+			</tr>
+			<tr>
+				<td>Quantity </td>
+				<td><input type="text" name="quantity" id="quantity" value="<%=quantity%>" /></td>
+			</tr>
+			<tr>
+				<td>Price </td>
+				<td><input type="text" name="price" id="price" value="<%=price %>"/></td>
+			</tr>
+			<tr>
+				<td><br><br></td>
+				<td>
+				<input id="submit" type="submit" value="Save" />
+				 
+				<a style="text-decoration:none" href="/home"> Home</a> 
+				</td>
+				
+				<td id="message"></td>
+			</tr>
+
+		</table>
+		
+	</form> 
+</body>
+</html>
